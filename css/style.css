@@ -1,4 +1,58 @@
-@-webkit-keyframes pulse {}@keyframes pulse {}body {
+@-webkit-keyframes pulse {
+  0% {
+    width: 160px;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
+  }
+  50% {
+    width: 205px;
+    -webkit-clip-path: polygon(3% 0, 50% 0, 96% 0, 99% 23%, 99% 40%, 98% 54%, 96% 65%, 93% 78%, 80% 80%, 60% 80%, 36% 80%, 10% 80%, 4% 69%, 1% 54%, 0 36%, 1% 19%);
+            clip-path: polygon(3% 0, 50% 0, 96% 0, 99% 23%, 99% 40%, 98% 54%, 96% 65%, 93% 78%, 80% 80%, 60% 80%, 36% 80%, 10% 80%, 4% 69%, 1% 54%, 0 36%, 1% 19%);
+  }
+  100% {
+    width: 160px;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    width: 160px;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
+  }
+  50% {
+    width: 205px;
+    -webkit-clip-path: polygon(3% 0, 50% 0, 96% 0, 99% 23%, 99% 40%, 98% 54%, 96% 65%, 93% 78%, 80% 80%, 60% 80%, 36% 80%, 10% 80%, 4% 69%, 1% 54%, 0 36%, 1% 19%);
+            clip-path: polygon(3% 0, 50% 0, 96% 0, 99% 23%, 99% 40%, 98% 54%, 96% 65%, 93% 78%, 80% 80%, 60% 80%, 36% 80%, 10% 80%, 4% 69%, 1% 54%, 0 36%, 1% 19%);
+  }
+  100% {
+    width: 160px;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
+  }
+}
+
+@-webkit-keyframes pop {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -1000px;
+  }
+}
+
+@keyframes pop {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -1000px;
+  }
+}
+
+body {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -68,8 +122,10 @@
   margin-left: auto;
   margin-right: auto;
   height: 20px;
-  background-color: #ff6359;
+  background: -webkit-gradient(linear, right top, left top, color-stop(20%, #ff6359), color-stop(20%, #ff6359), color-stop(30%, #2bcec3), color-stop(60%), color-stop(20%, #ff6359));
+  background: linear-gradient(to left, #ff6359 20%, #ff6359 20% 40%, #2bcec3 30% 20%, 60%, #ff6359 20% 80%);
   z-index: 2;
+  position: relative;
 }
 
 .main .wrap {
@@ -83,24 +139,30 @@
 }
 
 .main .wrap .box {
-  -webkit-animation: pulse 1s  ease  infinite;
-          animation: pulse 1s  ease  infinite;
-  width: 160px;
+  -webkit-animation: pulse 1.5s  ease  3;
+          animation: pulse 1.5s  ease  3;
   z-index: 1;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-  height: 100px;
-  background-color: #ffffff;
-  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ff0000' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+  content: " ";
+  height: 120px;
+  width: 160px;
+  background-color: white;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ff0000' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
+}
+
+.main .wrap .pop-lid-animation {
+  -webkit-animation: pop 1.5s  ease  1;
+          animation: pop 1.5s  ease  1;
 }
 
 .main .wrap .middle-line {
   z-index: 3;
-  bottom: 0;
+  bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   width: 30px;
-  height: 120px;
+  height: 90px;
   background-color: #03B4A7;
   position: absolute;
   content: ' ';

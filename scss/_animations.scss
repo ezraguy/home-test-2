@@ -1,5 +1,27 @@
 @keyframes pulse {
-    // from{border-radius:0px ;
-    //     transform-origin: ( top ,left);}
-    // to{border-radius: 100px;}
+ 0%{
+       width: 160px; 
+       clip-path: polygon(0% 0%, 100%  0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
+      }
+50%{    
+        width: 205px;
+        clip-path: polygon(3% 0, 50% 0, 96% 0, 99% 23%, 99% 40%, 98% 54%, 96% 65%, 93% 78%, 80% 80%, 60% 80%, 36% 80%, 10% 80%, 4% 69%, 1% 54%, 0 36%, 1% 19%);
+ }
+ 
+ 100%{
+    width: 160px;
+    clip-path: polygon(0% 0%, 100%  0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
+
+ }
+};
+
+@keyframes pop {
+    0%{
+       top:0;
+      
+}
+    100%{
+        top:-1000px;
+    }
+
 }

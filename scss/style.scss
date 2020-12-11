@@ -6,6 +6,7 @@ body{
 }
 
 .main{
+    
     background-color: orange;
     width: 100%;
     height: 100vh;
@@ -23,7 +24,7 @@ body{
         width: 150px;
         position: relative;
         margin-bottom: 10px;
-
+        
     .bow{
         width: 0;
         height: 0;
@@ -49,34 +50,44 @@ body{
     margin-left: auto;
     margin-right: auto;
     height: 20px;
-    background-color: #ff6359;
+    // background-color: #ff6359;
+    background: linear-gradient(to left, 
+    #ff6359 20%, #ff6359 20% 40%, #2bcec3 30% 20%, 60% , #ff6359 20% 80%);
+
     z-index: 2;
+   position: relative;
+    
 }
 
 .wrap{
    position: relative;
    display: flex;
    justify-content: center;
+   
   
     .box{
-        animation: pulse 1s  ease  infinite;
-        width: 160px;
+        animation: pulse 1.5s  ease  3 ;
         z-index: 1;
-        transform-origin: ( top left);
-        height: 100px;
-        background-color: #ffffff;
-        background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ff0000' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
-    
+        content: " ";
+        height: 120px;
+        width: 160px;
+        background-color: white;
+        background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ff0000' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+         clip-path: polygon(0% 0%, 100%  0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
         
+    }
+
+    .pop-lid-animation{
+        animation: pop 1.5s  ease  1 ;
     }
 
     .middle-line{
         z-index: 3;
-        bottom: 0;
+        bottom: 30px;
         margin-left: auto;
         margin-right: auto;
         width: 30px;
-        height:120px;
+        height:90px;
         background-color: #03B4A7;
         position: absolute;
         content: ' ';
