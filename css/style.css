@@ -1,8 +1,8 @@
 @-webkit-keyframes pulse {
   0% {
     width: 160px;
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
-            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 80% 80%, 50% 80%, 0% 80%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 80% 80%, 50% 80%, 0% 80%);
   }
   50% {
     width: 205px;
@@ -11,16 +11,16 @@
   }
   100% {
     width: 160px;
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
-            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 80% 80%, 50% 80%, 0% 80%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 80% 80%, 50% 80%, 0% 80%);
   }
 }
 
 @keyframes pulse {
   0% {
     width: 160px;
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
-            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 80% 80%, 50% 80%, 0% 80%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 80% 80%, 50% 80%, 0% 80%);
   }
   50% {
     width: 205px;
@@ -29,8 +29,8 @@
   }
   100% {
     width: 160px;
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
-            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 80% 80%, 50% 80%, 0% 80%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 80% 80%, 50% 80%, 0% 80%);
   }
 }
 
@@ -143,12 +143,12 @@ body {
           animation: pulse 1.5s  ease  3;
   z-index: 1;
   content: " ";
-  height: 120px;
+  height: 150px;
   width: 160px;
   background-color: white;
   background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ff0000' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
-          clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 50% 75%, 0% 75%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 80% 80%, 50% 80%, 0% 80%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 80% 80%, 50% 80%, 0% 80%);
 }
 
 .main .wrap .pop-lid-animation {
@@ -159,10 +159,8 @@ body {
 .main .wrap .middle-line {
   z-index: 3;
   bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30px;
-  height: 90px;
+  height: 80%;
+  width: 36px;
   background-color: #03B4A7;
   position: absolute;
   content: ' ';
