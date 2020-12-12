@@ -14,9 +14,9 @@ const init = () => {
     addAnimations();
 }
 const addConfetti = () => {
-    productBox.style.animation = ' rise 1s ease forwards'
-    light.style.animation = ' shine 1s ease forwards'
-    desc.style.animation = ' showText 1s ease forwards 500ms'
+    productBox.style.animation = ' rise 1s ease forwards 300ms'
+    light.style.animation = ' shine 1.5s ease forwards 100ms'
+    desc.style.animation = ' showText 1s ease forwards 700ms'
     confetti.click()
 
 }

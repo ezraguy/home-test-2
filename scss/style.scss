@@ -120,9 +120,10 @@ body{
     }
     .product-box{
         position: absolute;
-        bottom:30px;
+        bottom:0px;
+        z-index: -1;
         .product-img{
-            width: 120px;
+            width: 150px;
         }
     }
     .light-wrap{
@@ -140,16 +141,18 @@ body{
     .product-title-wrap{
         position: absolute;
         text-align: center;
-        left: 0px;
+        left: -7px;
+        z-index: -1;
         color: #ed3629;
+
         .product-title{
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 5px;
             padding-right: 10px;
         }
         .product-text{
            
-            width: 150px;
+            width: 173px;
             margin-right: 20px;
             margin-top: 0px;
         }
