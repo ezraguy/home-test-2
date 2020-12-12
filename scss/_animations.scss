@@ -25,3 +25,25 @@
     }
 
 }
+
+@keyframes rise{
+    0%{bottom: 30px;}
+    100%{bottom: 120px;}
+}
+
+
+@keyframes shine{
+    0%{bottom: 30px;}
+    100%{
+        height: 270px;
+        bottom: 120px;
+        width: 300px;
+        left: -72px;
+}
+}
+
+@keyframes showText{
+    0%{bottom: 0;}
+    100%{bottom: 260px;
+    }
+}

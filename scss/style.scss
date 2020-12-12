@@ -1,4 +1,7 @@
 @import './animations';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
 body{
     margin: 0;
     padding: 0;
@@ -6,7 +9,7 @@ body{
 }
 
 .main{
-    
+    font-family: 'Roboto', sans-serif;
     background-color: orange;
     width: 100%;
     height: 100vh;
@@ -27,6 +30,7 @@ body{
         
     .bow{
         width: 0;
+        z-index: 4;
         height: 0;
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
@@ -35,13 +39,37 @@ body{
         position: absolute;
           &:nth-child(1){
               margin-left: 20px;
+              z-index: 20;
               transform: rotate(225deg);
           }
           &:nth-child(2){
             margin-right: 20px;
-
+          
             transform: rotate(135deg);
         }  
+
+        .inner-bow{
+            width: 0;
+            height: 0;
+            z-index: 10;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 20px solid #FFA500;
+            border-radius: 10px ;
+            position: absolute;
+            &:nth-of-type(1){
+               top: 10px;
+               right: -10px;
+                z-index: 20;
+                transform: rotate(5deg);
+            }
+            &:nth-of-type(2){
+                top: 10px;
+                right: -20px;
+                 z-index: 20;
+                 transform: rotate(5deg);
+             }
+        }
     }
 }
 
@@ -50,12 +78,10 @@ body{
     margin-left: auto;
     margin-right: auto;
     height: 20px;
-    // background-color: #ff6359;
     background: linear-gradient(to left, 
     #ff6359 20%, #ff6359 20% 40%, #2bcec3 30% 20%, 60% , #ff6359 20% 80%);
-
     z-index: 2;
-   position: relative;
+    position: relative;
     
 }
 
@@ -66,7 +92,8 @@ body{
    
   
     .box{
-        animation: pulse 1.5s  ease  3 ;
+        animation: pulse 1.5s ease  3 ;
+        animation-delay: 500ms;
         z-index: 1;
         content: " ";
         height: 150px;
@@ -90,5 +117,42 @@ body{
         position: absolute;
         content: ' ';
       }
+    }
+    .product-box{
+        position: absolute;
+        bottom:30px;
+        .product-img{
+            width: 120px;
+        }
+    }
+    .light-wrap{
+        position: absolute;
+        left: 60px;
+         bottom: 30px;
+         width: 40px;
+        .light{
+            filter: blur(8px);
+            height: 100%;
+          width: 100%;
+         }
+    }
+
+    .product-title-wrap{
+        position: absolute;
+        text-align: center;
+        left: 0px;
+        color: #ed3629;
+        .product-title{
+            font-weight: 600;
+            margin-bottom: 5px;
+            padding-right: 10px;
+        }
+        .product-text{
+           
+            width: 150px;
+            margin-right: 20px;
+            margin-top: 0px;
+        }
+
     }
 }
